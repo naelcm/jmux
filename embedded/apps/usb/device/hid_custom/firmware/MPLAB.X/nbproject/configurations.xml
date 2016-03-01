@@ -80,11 +80,6 @@
             <itemPath>../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/buttons.c</itemPath>
             <itemPath>../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/leds.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="pic18f14k50" displayName="pic18f14k50" projectFiles="true">
-            <itemPath>../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c</itemPath>
-            <itemPath>../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c</itemPath>
-            <itemPath>../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c</itemPath>
-          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f1" displayName="framework" projectFiles="true">
@@ -140,36 +135,6 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <HI-TECH-COMP>
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
@@ -624,36 +589,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -891,36 +826,6 @@
         </XC8-config-global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <HI-TECH-COMP>
@@ -1176,36 +1081,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -1443,36 +1318,6 @@
         </XC8-config-global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <HI-TECH-COMP>
@@ -1728,36 +1573,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -2004,36 +1819,6 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -2242,36 +2027,6 @@
         </XC8-config-global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <HI-TECH-COMP>
@@ -2518,36 +2273,6 @@
         </XC8-config-global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <HI-TECH-COMP>
@@ -2818,48 +2543,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -3204,48 +2887,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -3608,48 +3249,6 @@
         <C30Global>
         </C30Global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -3992,48 +3591,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -4404,48 +3961,6 @@
         <C30Global>
         </C30Global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -4747,48 +4262,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -5206,48 +4679,6 @@
         <C30Global>
         </C30Global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -5606,48 +5037,6 @@
         <C30Global>
         </C30Global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -5939,48 +5328,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -6302,48 +5649,6 @@
         <C30Global>
         </C30Global>
       </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
       <item path="../src/system_config/low_pin_count_usb_development_kit/pic16f1459/fixed_address_memory.h"
             ex="true"
             overriding="false">
@@ -6640,48 +5945,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>
@@ -7087,48 +6350,6 @@
         </C30Global>
       </item>
       <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic16f1459/power.h"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/adc.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/buttons.c"
-            ex="true"
-            overriding="false">
-        <C30>
-        </C30>
-        <C30-AR>
-        </C30-AR>
-        <C30-AS>
-        </C30-AS>
-        <C30-LD>
-        </C30-LD>
-        <C30Global>
-        </C30Global>
-      </item>
-      <item path="../../../../../../bsp/low_pin_count_usb_development_kit/pic18f14k50/leds.c"
             ex="true"
             overriding="false">
         <C30>

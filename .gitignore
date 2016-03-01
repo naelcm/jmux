@@ -1,0 +1,16 @@
+*.d
+*.p1
+*.pre
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.elf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.hxl
+*.obj
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.map
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.lst
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/production/MPLAB.X.production.cmf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/production/MPLAB.X.production.cmf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/production/MPLAB.X.production.cmf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.cmf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.sdb
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/production/MPLAB.X.production.cmf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/debug/MPLAB.X.debug.rlf
+embedded/apps/usb/device/hid_custom/firmware/MPLAB.X/dist/LPCUSBDK_16F1459/production/MPLAB.X.production.cmf
