@@ -28,6 +28,11 @@
 
 #include "system.h"
 
+#define	MAJOR_VERSION	3
+#define	MINOR_VERSION	2
+#define COMPILE_DAY		05
+#define	COMPILE_MONTH	7
+#define COMPILE_YEAR	13
 
 /** VARIABLES ******************************************************/
 /* Some processors have a limited range of RAM addresses where the USB module
@@ -114,51 +119,115 @@ void APP_DeviceCustomHIDTasks()
         //application software wants us to fulfill.
         switch(ReceivedDataBuffer[0])				//Look at the data the host sent, to see what kind of application specific command it sent.
         {
-            case COMMAND_TOGGLE_LED:  //Toggle LEDs command
-                LED_Toggle(LED_USB_DEVICE_HID_CUSTOM);
+            case 0x90:	// Control relays
+        {
+                if( 0 != ReceivedDataBuffer[1] )
+                {
+                        LATCbits.LATC0 = 1;		// Zoom in
+                }
+                else
+                {
+                        LATCbits.LATC0 = 0;
+                }
+                if( 0 != ReceivedDataBuffer[2] )
+                {
+                        LATCbits.LATC2 = 1;		// Zoom out
+                }
+                else
+                {
+                        LATCbits.LATC2 = 0;
+                }
                 break;
-            case COMMAND_GET_BUTTON_STATUS:  //Get push button state
-                //Check to make sure the endpoint/buffer is free before we modify the contents
+            }
+
+            case 0xFB:	// Write capabilities
+            {
+                //EECON1bits.WREN = 1;			// Enable EEPROM writes
+                //EEPROM_Write( 16, ReceivedDataBuffer[1] );	// PanTilt version
+                //EEPROM_Write( 17, ReceivedDataBuffer[2] );	// Relay version
+                //EEPROM_Write( 18, ReceivedDataBuffer[3] );	// LANC version
+                //EEPROM_Write( 19, ReceivedDataBuffer[4] );	// Reserved
+                //EEPROM_Write( 20, ReceivedDataBuffer[5] );	// Reserved
+                //EEPROM_Write( 21, ReceivedDataBuffer[6] );	// Reserved
+                //EEPROM_Write( 22, ReceivedDataBuffer[7] );	// Reserved
+                //EEPROM_Write( 23, ReceivedDataBuffer[8] );	// Reserved
+                //EECON1bits.WREN = 0;			// Prevent further writes
+                break;
+            }
+
+            case 0xFC:	// Request capabilities.  Capabilities are stored in EEPROM because all PTS have the
+                        // same software but hardware functionality varies
+            {
+                ToSendDataBuffer[0] = 0xFC;
+                ToSendDataBuffer[1] = 0x01;
+                ToSendDataBuffer[2] = 1;	// PanTilt version
+                ToSendDataBuffer[3] = 1;	// Relay version
+                ToSendDataBuffer[4] = 0;	// LANC version
+                ToSendDataBuffer[5] = 0;	// Reserved
+                ToSendDataBuffer[6] = 0;	// Reserved
+                ToSendDataBuffer[7] = 0;	// Reserved
+                ToSendDataBuffer[8] = 0;	// Reserved
+                ToSendDataBuffer[9] = 0;	// Reserved
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
-                    ToSendDataBuffer[0] = 0x81;				//Echo back to the host PC the command we are fulfilling in the first uint8_t.  In this case, the Get Pushbutton State command.
-                    if(BUTTON_IsPressed(BUTTON_USB_DEVICE_HID_CUSTOM) == false)	//pushbutton not pressed, pull up resistor on circuit board is pulling the PORT pin high
-                    {
-                            ToSendDataBuffer[1] = 0x01;
-                    }
-                    else									//sw3 must be == 0, pushbutton is pressed and overpowering the pull up resistor
-                    {
-                            ToSendDataBuffer[1] = 0x00;
-                    }
-                    //Prepare the USB module to send the data packet to the host
-                    USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
+                    USBInHandle = USBTransferOnePacket(CUSTOM_DEVICE_HID_EP,IN_TO_HOST,(uint8_t*)&ToSendDataBuffer[0],10);
                 }
                 break;
+            }
 
-            case COMMAND_READ_POTENTIOMETER:	//Read POT command.  Uses ADC to measure an analog voltage on one of the ANxx I/O pins, and returns the result to the host
+            case 0xFD:	// Write serial number
+            {
+                //EECON1bits.WREN = 1;			// Enable EEPROM writes
+                //EEPROM_Write( 0, ReceivedDataBuffer[1] );
+                //EEPROM_Write( 1, ReceivedDataBuffer[2] );
+                //EEPROM_Write( 2, ReceivedDataBuffer[3] );
+                //EEPROM_Write( 3, ReceivedDataBuffer[4] );
+                //EEPROM_Write( 4, ReceivedDataBuffer[5] );
+                //EEPROM_Write( 5, ReceivedDataBuffer[6] );
+                //EEPROM_Write( 6, ReceivedDataBuffer[7] );
+                //EEPROM_Write( 7, ReceivedDataBuffer[8] );
+                //EECON1bits.WREN = 0;			// Prevent further writes
+                break;
+            }
+
+            case 0xFE:	// Request software version
+            {
+                ToSendDataBuffer[0] = 0xFE;
+                ToSendDataBuffer[1] = 0x01;
+                ToSendDataBuffer[2] = MAJOR_VERSION;				// Major part of version
+                ToSendDataBuffer[3] = MINOR_VERSION;				// Minor part of version
+                ToSendDataBuffer[4] = COMPILE_YEAR;					// Compile date year
+                ToSendDataBuffer[5] = COMPILE_MONTH;				// Compile date month
+                ToSendDataBuffer[6] = COMPILE_DAY;					// Compile date day
+                ToSendDataBuffer[7] = 0;
+                ToSendDataBuffer[8] = 0;
+                ToSendDataBuffer[9] = 0;
+                if(!HIDTxHandleBusy(USBInHandle))
                 {
-                    uint16_t pot;
-
-                    //Check to make sure the endpoint/buffer is free before we modify the contents
-                    if(!HIDTxHandleBusy(USBInHandle))
-                    {
-                        //Use ADC to read the I/O pin voltage.  See the relevant HardwareProfile - xxxxx.h file for the I/O pin that it will measure.
-                        //Some demo boards, like the PIC18F87J50 FS USB Plug-In Module board, do not have a potentiometer (when used stand alone).
-                        //This function call will still measure the analog voltage on the I/O pin however.  To make the demo more interesting, it
-                        //is suggested that an external adjustable analog voltage should be applied to this pin.
-
-                        pot = ADC_Read10bit(ADC_CHANNEL_POTENTIOMETER);
-
-                        ToSendDataBuffer[0] = 0x37;  	//Echo back to the host the command we are fulfilling in the first uint8_t.  In this case, the Read POT (analog voltage) command.
-                        ToSendDataBuffer[1] = (uint8_t)pot; //LSB
-                        ToSendDataBuffer[2] = pot >> 8;     //MSB
-
-
-                        //Prepare the USB module to send the data packet to the host
-                        USBInHandle = HIDTxPacket(CUSTOM_DEVICE_HID_EP, (uint8_t*)&ToSendDataBuffer[0],64);
-                    }
+                    USBInHandle = USBTransferOnePacket(CUSTOM_DEVICE_HID_EP,IN_TO_HOST,(uint8_t*)&ToSendDataBuffer[0],10);
                 }
                 break;
+            }
+
+            case 0xFF:	// Request serial number
+            {
+                ToSendDataBuffer[0] = 0xFF;
+                ToSendDataBuffer[1] = 0x01;
+                ToSendDataBuffer[2] = 'A';
+                ToSendDataBuffer[3] = 'B';
+                ToSendDataBuffer[4] = 'C';
+                ToSendDataBuffer[5] = 'D';
+                ToSendDataBuffer[6] = 'E';
+                ToSendDataBuffer[7] = 'F';
+                ToSendDataBuffer[8] = 'G';
+                ToSendDataBuffer[9] = 'H';
+                if(!HIDTxHandleBusy(USBInHandle))
+                {
+                    USBInHandle = USBTransferOnePacket(CUSTOM_DEVICE_HID_EP,IN_TO_HOST,(uint8_t*)&ToSendDataBuffer[0],10);
+                }
+                break;
+            }
+
         }
         //Re-arm the OUT endpoint, so we can receive the next OUT data packet 
         //that the host may try to send us.
