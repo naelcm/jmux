@@ -28,11 +28,11 @@
 
 #include "system.h"
 
-#define	MAJOR_VERSION	3
-#define	MINOR_VERSION	2
-#define COMPILE_DAY		05
-#define	COMPILE_MONTH	7
-#define COMPILE_YEAR	13
+#define	MAJOR_VERSION	0
+#define	MINOR_VERSION	1
+#define COMPILE_DAY     05
+#define	COMPILE_MONTH	3
+#define COMPILE_YEAR	16
 
 /** VARIABLES ******************************************************/
 /* Some processors have a limited range of RAM addresses where the USB module
@@ -120,22 +120,75 @@ void APP_DeviceCustomHIDTasks()
         switch(ReceivedDataBuffer[0])				//Look at the data the host sent, to see what kind of application specific command it sent.
         {
             case 0x90:	// Control relays
-        {
-                if( 0 != ReceivedDataBuffer[1] )
+            {
+                switch(ReceivedDataBuffer[1])   // Relay A
                 {
-                        LATCbits.LATC0 = 1;		// Zoom in
+                    case 0:
+                        LATCbits.LATC7 = 0;
+                        break;
+                    case 1:
+                        LATCbits.LATC7 = 1;
+                        break;
+                    case 2:
+                        LATCbits.LATC7 = !LATCbits.LATC7;
+                        break;
+                    case 3:
+                    default:
+                        break;
                 }
-                else
+                switch(ReceivedDataBuffer[2])   // Relay B
                 {
-                        LATCbits.LATC0 = 0;
+                    case 0:
+                        LATBbits.LATB6 = 0;
+                        break;
+                    case 1:
+                        LATBbits.LATB6 = 1;
+                        break;
+                    case 2:
+                        LATBbits.LATB6 = !LATBbits.LATB6;
+                        break;
+                    case 3:
+                    default:
+                        break;
                 }
-                if( 0 != ReceivedDataBuffer[2] )
+                break;
+            }
+            case 0x91:	// Set multiplexer node
+            {
+                switch(ReceivedDataBuffer[1])
                 {
-                        LATCbits.LATC2 = 1;		// Zoom out
-                }
-                else
-                {
+                    case 0:
+                        LATBbits.LATB4 = 0;
                         LATCbits.LATC2 = 0;
+                        LATCbits.LATC5 = 1;
+                        LATCbits.LATC4 = 0;
+                        LATCbits.LATC3 = 0;
+                        LATCbits.LATC6 = 0;
+                        break;
+                    case 1:
+                        LATBbits.LATB4 = 1;
+                        LATCbits.LATC2 = 0;
+                        LATCbits.LATC5 = 0;
+                        LATCbits.LATC4 = 1;
+                        LATCbits.LATC3 = 0;
+                        LATCbits.LATC6 = 0;
+                        break;
+                    case 2:
+                        LATBbits.LATB4 = 0;
+                        LATCbits.LATC2 = 1;
+                        LATCbits.LATC5 = 0;
+                        LATCbits.LATC4 = 0;
+                        LATCbits.LATC3 = 1;
+                        LATCbits.LATC6 = 0;
+                        break;
+                    case 3:
+                        LATBbits.LATB4 = 1;
+                        LATCbits.LATC2 = 1;
+                        LATCbits.LATC5 = 0;
+                        LATCbits.LATC4 = 0;
+                        LATCbits.LATC3 = 0;
+                        LATCbits.LATC6 = 1;
+                        break;
                 }
                 break;
             }
@@ -159,10 +212,10 @@ void APP_DeviceCustomHIDTasks()
                         // same software but hardware functionality varies
             {
                 ToSendDataBuffer[0] = 0xFC;
-                ToSendDataBuffer[1] = 0x01;
-                ToSendDataBuffer[2] = 1;	// PanTilt version
-                ToSendDataBuffer[3] = 1;	// Relay version
-                ToSendDataBuffer[4] = 0;	// LANC version
+                ToSendDataBuffer[1] = 4;        // Number of supported multiplexer nodes
+                ToSendDataBuffer[2] = 2;	// Number of auxillary relays
+                ToSendDataBuffer[3] = 0;	// Reserved
+                ToSendDataBuffer[4] = 0;	// Reserved
                 ToSendDataBuffer[5] = 0;	// Reserved
                 ToSendDataBuffer[6] = 0;	// Reserved
                 ToSendDataBuffer[7] = 0;	// Reserved
@@ -213,14 +266,14 @@ void APP_DeviceCustomHIDTasks()
             {
                 ToSendDataBuffer[0] = 0xFF;
                 ToSendDataBuffer[1] = 0x01;
-                ToSendDataBuffer[2] = 'A';
-                ToSendDataBuffer[3] = 'B';
-                ToSendDataBuffer[4] = 'C';
-                ToSendDataBuffer[5] = 'D';
-                ToSendDataBuffer[6] = 'E';
-                ToSendDataBuffer[7] = 'F';
-                ToSendDataBuffer[8] = 'G';
-                ToSendDataBuffer[9] = 'H';
+                ToSendDataBuffer[2] = 'J';
+                ToSendDataBuffer[3] = 'M';
+                ToSendDataBuffer[4] = '-';
+                ToSendDataBuffer[5] = '1';
+                ToSendDataBuffer[6] = '0';
+                ToSendDataBuffer[7] = '0';
+                ToSendDataBuffer[8] = '0';
+                ToSendDataBuffer[9] = 0;
                 if(!HIDTxHandleBusy(USBInHandle))
                 {
                     USBInHandle = USBTransferOnePacket(CUSTOM_DEVICE_HID_EP,IN_TO_HOST,(uint8_t*)&ToSendDataBuffer[0],10);

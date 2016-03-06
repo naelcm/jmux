@@ -30,11 +30,13 @@
 #include "app_device_custom_hid.h"
 #include "app_led_usb_status.h"
 
-
+static void JMuxInit(void);
 
 MAIN_RETURN main(void)
 {
     SYSTEM_Initialize(SYSTEM_STATE_USB_START);
+    
+    JMuxInit();
 
     USBDeviceInit();
     USBDeviceAttach();
@@ -83,6 +85,31 @@ MAIN_RETURN main(void)
 
     }//end while
 }//end main
+
+static void JMuxInit(void)
+{
+    LATCbits.LATC5 = 1;     // LED1 On
+    LATCbits.LATC4 = 0;     // LED1 Off
+    LATCbits.LATC3 = 0;     // LED1 Off
+    LATCbits.LATC6 = 0;     // LED1 Off
+
+    TRISCbits.TRISC5 = 0;   // LED1 set to output
+    TRISCbits.TRISC4 = 0;   // LED2 set to output
+    TRISCbits.TRISC3 = 0;   // LED3 set to output
+    TRISCbits.TRISC6 = 0;   // LED4 set to output
+
+    LATBbits.LATB4 = 0;     // Mux relay 0 Off
+    LATCbits.LATC2 = 0;     // Mux relay 1 Off
+
+    TRISBbits.TRISB4 = 0;   // Mux relay 0
+    TRISCbits.TRISC2 = 0;   // Mux relay 1
+
+    LATCbits.LATC7 = 0;     // Auxillary relay A Off
+    LATBbits.LATB6 = 0;     // Auxillary relay B Off
+
+    TRISCbits.TRISC7 = 0;   // Auxillary relay A
+    TRISBbits.TRISB6 = 0;   // Auxillary relay B
+}
 
 
 /*******************************************************************
